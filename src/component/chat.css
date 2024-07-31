@@ -1,0 +1,146 @@
+/* chat.css */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.message-display-area {
+    flex: 1;
+    padding: 16px;
+    background-color: #f7f7f7;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message.bot {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    align-self: flex-start;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+.typing-dots {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background-color: #aaa;
+    animation: typing 1s infinite steps(3);
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0.2;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.inputField {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: none;
+    outline: none;
+    margin-right: 8px;
+}
+
+.sendButton {
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.sendButton:hover {
+    background-color: #0056b3;
+}
+/* styles.css */
+
+.content {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    /* This preserves white space and line breaks */
+}
+
+code {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #d63384;
+}

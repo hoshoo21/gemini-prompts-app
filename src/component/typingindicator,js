@@ -1,0 +1,8 @@
+const TypingIndicatorComponent = () => {
+    return (
+        <></>
+    )
+
+}
+
+export default TypingIndicatorComponent;

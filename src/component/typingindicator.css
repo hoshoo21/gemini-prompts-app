@@ -1,0 +1,34 @@
+.typing-indicator {
+    display: none;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+.typing-indicator.visible {
+    display: inline-block;
+}
+
+.typing-dots {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #555;
+    border-radius: 50%;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-dots:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-dots:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots:nth-child(3) {
+    animation-delay: 0.4s;
+}
