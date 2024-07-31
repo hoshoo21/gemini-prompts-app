@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './chat.css'
 import MessageComponent from './message';
-import TypingIndicatorComponent from './typingindicator,js';
+import TypingIndicatorComponent from './typingindicator.js';
 
 const ChatComponent = () => {
     const enteredInputRef = useRef();
@@ -88,13 +88,8 @@ const ChatComponent = () => {
             <div
                 className="message-display-area" ref={displayAreaRef}>
                 {messages.length > 0 && messages.map((message) => <MessageComponent id={randomNumber()} classList={message.classList} text={message.text} />)}
-                {isTyping &&
-                    <div className="message bot typing-indicator visible">
-                        <span className="typing-dots">
-                            <span className="typing-dots"></span>
-                            <span className="typing-dots"></span>
-                        </span>
-                    </div>
+                {isTyping && <TypingIndicatorComponent />
+
                 }
             </div>
             <div className='input-container'>
